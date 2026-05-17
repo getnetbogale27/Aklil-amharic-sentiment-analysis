@@ -37,10 +37,9 @@ results/models/*.safetensors
 .cache/
 ~/.cache/huggingface/
 
-# ── Data — raw files are tracked; processed outputs are re-generatable ────────
-# Track the directory itself (via .gitkeep) but ignore generated content.
-data/processed/*
-!data/processed/.gitkeep
+# ── Data — processed outputs are tracked for reproducibility ─────────────────
+# Allow all CSV / JSON outputs; only ignore large binary model artefacts.
+!data/processed/
 data/annotated/*.tsv
 
 # ── OS / editor artefacts ─────────────────────────────────────────────────────
