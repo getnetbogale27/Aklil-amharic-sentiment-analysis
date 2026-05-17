@@ -1,0 +1,48 @@
+# =============================================================================
+# Amharic Sentiment Analysis — Model & Training Configuration
+# =============================================================================
+# Edit this file to switch models or tune hyperparameters.
+# All scripts in src/ load this file via --config configs/model_config.yaml
+
+# ── General ──────────────────────────────────────────────────────────────────
+seed: 42
+num_classes: 3          # positive, negative, neutral
+label_names:
+  - positive
+  - negative
+  - neutral
+
+# ── Data ─────────────────────────────────────────────────────────────────────
+max_length: 128         # max sub-word tokens per tweet (covers 99% of AfriSenti AMH)
+train_path: data/processed/amh/train_processed.tsv
+dev_path:   data/processed/amh/dev_processed.tsv
+test_path:  data/processed/amh/test_processed.tsv
+
+# ── Training ─────────────────────────────────────────────────────────────────
+batch_size:    32
+num_epochs:    10
+learning_rate: 2.0e-5
+weight_decay:  0.01
+warmup_ratio:  0.1      # fraction of training steps used for LR warm-up
+grad_clip:     1.0      # gradient clipping max norm
+early_stopping_patience: 3
+
+# ── XLM-RoBERTa (Transformer) ────────────────────────────────────────────────
+# Use 'xlm-roberta-large' for best accuracy (requires more GPU memory).
+transformer_checkpoint: xlm-roberta-base
+transformer_dropout:    0.1
+freeze_base:            false   # true = only train the classification head
+
+# ── Bi-LSTM ──────────────────────────────────────────────────────────────────
+vocab_size:   50000
+embed_dim:    128
+hidden_dim:   256
+num_layers:   2
+dropout:      0.5
+pad_idx:      0
+
+# ── Output ───────────────────────────────────────────────────────────────────
+output_dir:         results/models
+figures_dir:        results/figures
+metrics_dir:        results/metrics
+log_every_n_steps:  50

@@ -1,0 +1,66 @@
+# =============================================================================
+# .gitignore — Amharic Sentiment Analysis (Python / ML project)
+# =============================================================================
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+pip-wheel-metadata/
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+.env
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_meta
+
+# ── Large model weights & checkpoints ────────────────────────────────────────
+# Keep results/models/ in git only if files are small (<50 MB).
+# Use Git LFS or a model registry (HuggingFace Hub) for large weights.
+results/models/*.pt
+results/models/*.bin
+results/models/*.safetensors
+*.ckpt
+
+# ── HuggingFace model cache ───────────────────────────────────────────────────
+.cache/
+~/.cache/huggingface/
+
+# ── Data — raw files are tracked; processed outputs are re-generatable ────────
+# Track the directory itself (via .gitkeep) but ignore generated content.
+data/processed/*
+!data/processed/.gitkeep
+data/annotated/*.tsv
+
+# ── OS / editor artefacts ─────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ── Logs & temporary files ────────────────────────────────────────────────────
+*.log
+logs/
+wandb/
+runs/
+mlruns/
+outputs/
+
+# ── Secrets ───────────────────────────────────────────────────────────────────
+.env
+secrets.yaml
+*.pem
+*.key
