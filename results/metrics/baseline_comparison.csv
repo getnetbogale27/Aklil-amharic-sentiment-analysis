@@ -1,0 +1,5 @@
+Model,Accuracy,Precision,Recall,F1_macro,F1_weighted
+Naive Bayes,0.6112,0.6559,0.5973,0.6109,0.6111
+Logistic Regression,0.5887,0.6095,0.5822,0.591,0.5893
+SVM,0.5838,0.5944,0.5838,0.5882,0.5845
+KNN,0.4174,0.4217,0.4273,0.4112,0.4069
