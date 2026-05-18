@@ -49,7 +49,7 @@ class AmharicBiLSTM(nn.Module):
         self,
         vocab_size: int,
         embed_dim: int = 128,
-        hidden_dim: int = 256,
+        hidden_dim: int = 128,
         num_layers: int = 2,
         num_classes: int = 3,
         dropout: float = 0.5,
