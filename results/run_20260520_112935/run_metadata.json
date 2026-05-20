@@ -1,0 +1,68 @@
+{
+  "timestamp": "20260520_112935",
+  "total_samples": 10972,
+  "train_size": 7680,
+  "val_size": 1646,
+  "test_size": 1646,
+  "test_class_distribution": {
+    "positive": 425,
+    "negative": 576,
+    "neutral": 645
+  },
+  "models_evaluated": [
+    "Naive Bayes",
+    "Logistic Regression",
+    "SVM",
+    "KNN",
+    "Bi-LSTM",
+    "XLM-RoBERTa"
+  ],
+  "best_model": "Naive Bayes",
+  "best_f1_macro": 0.6109,
+  "all_scores": {
+    "Naive Bayes": {
+      "accuracy": 0.6112,
+      "precision_macro": 0.6559,
+      "recall_macro": 0.5973,
+      "f1_macro": 0.6109
+    },
+    "Logistic Regression": {
+      "accuracy": 0.5887,
+      "precision_macro": 0.6095,
+      "recall_macro": 0.5822,
+      "f1_macro": 0.591
+    },
+    "SVM": {
+      "accuracy": 0.5838,
+      "precision_macro": 0.5944,
+      "recall_macro": 0.5838,
+      "f1_macro": 0.5882
+    },
+    "KNN": {
+      "accuracy": 0.4174,
+      "precision_macro": 0.4217,
+      "recall_macro": 0.4273,
+      "f1_macro": 0.4112
+    },
+    "Bi-LSTM": {
+      "accuracy": 0.5759,
+      "precision_macro": 0.5778,
+      "recall_macro": 0.5792,
+      "f1_macro": 0.5776
+    },
+    "XLM-RoBERTa": {
+      "accuracy": "N/A",
+      "precision_macro": "N/A",
+      "recall_macro": "N/A",
+      "f1_macro": "N/A"
+    }
+  },
+  "xlmr_status": "NOT TRAINED \u2014 no GPU available (CUDA unavailable, PyTorch CPU only)",
+  "gpu_available": false,
+  "bilstm_note": "bilstm_best.pt not committed; per-class metrics estimated from aggregate test scores",
+  "notes": [
+    "Naive Bayes (TF-IDF bigrams) is the best model among trained models.",
+    "Bi-LSTM underperforms NB by 3.33 F1 points \u2014 primary causes: random-init char embeddings + overfitting.",
+    "XLM-RoBERTa expected to exceed all models; requires GPU training (see src/train_xlmr.py)."
+  ]
+}
