@@ -1,0 +1,22 @@
+Experiment_ID,Model,Features,Hyperparameters,F1_macro,Accuracy,Precision_macro,Recall_macro,F1_positive,F1_negative,F1_neutral,Training_time_s,Notes
+EXP_001,Naive Bayes,"word TF-IDF (1-2), max=10k",alpha=1.0,0.6116,0,0,0,0.615,0.614,0.606,0.3,Runner1-ML-phase
+EXP_002,Naive Bayes (char),"char TF-IDF (2-5), max=50k",alpha=0.1,0.6421,0,0,0,0.662,0.651,0.613,1.4,Runner1-ML-phase
+EXP_003,"Logistic Regression (word, balanced)","word TF-IDF (1-2), max=20k","C=1.0, balanced",0.6014,0,0,0,0.636,0.596,0.571,3.6,Runner1-ML-phase
+EXP_004,"Logistic Regression (char, balanced)","char TF-IDF (2-5), max=50k","C=1.0, balanced",0.6279,0,0,0,0.665,0.626,0.593,7.1,Runner1-ML-phase
+EXP_005,"SVM (word, balanced)","word TF-IDF (1-2), max=20k","C=1.0, balanced",0.5941,0,0,0,0.635,0.584,0.563,0.4,Runner1-ML-phase
+EXP_006,"SVM (char, balanced)","char TF-IDF (2-5), max=50k","C=1.0, balanced",0.6123,0,0,0,0.664,0.606,0.567,1.9,Runner1-ML-phase
+EXP_007,LR word+char balanced,word (1-2)+char (2-5) TF-IDF,"C=1.0, balanced",0.626,0,0,0,0.674,0.616,0.588,6.0,Runner1-ML-phase
+EXP_008,SVM word+char balanced,word (1-2)+char (2-5) TF-IDF,"C=1.0, balanced",0.6039,0,0,0,0.647,0.6,0.564,2.4,Runner1-ML-phase
+EXP_009,LR wide n-grams balanced,word (1-3)+char (2-6) TF-IDF,"C=2.0, balanced",0.6257,0,0,0,0.671,0.616,0.591,6.0,Runner1-ML-phase
+EXP_010,SVM wide n-grams balanced,word (1-3)+char (2-6) TF-IDF,"C=2.0, balanced",0.602,0,0,0,0.639,0.603,0.564,3.3,Runner1-ML-phase
+EXP_011,LR C=0.1 wide balanced,word (1-3)+char (2-6),"C=0.1, balanced",0.6279,0,0,0,0.66,0.628,0.596,2.9,Runner1-ML-phase
+EXP_012,LR C=0.5 wide balanced,word (1-3)+char (2-6),"C=0.5, balanced",0.6292,0,0,0,0.673,0.623,0.591,4.8,Runner1-ML-phase
+EXP_013,LR C=5.0 wide balanced,word (1-3)+char (2-6),"C=5.0, balanced",0.617,0,0,0,0.664,0.606,0.581,9.7,Runner1-ML-phase
+EXP_014,LR C=10 wide balanced,word (1-3)+char (2-6),"C=10, balanced",0.6098,0,0,0,0.656,0.601,0.573,8.2,Runner1-ML-phase
+EXP_015,SVM C=0.5 wide balanced,word (1-3)+char (2-6),"C=0.5, balanced",0.6146,0,0,0,0.657,0.605,0.582,2.8,Runner1-ML-phase
+EXP_016,SVM C=2.0 wide balanced,word (1-3)+char (2-6),"C=2.0, balanced",0.602,0,0,0,0.639,0.603,0.564,3.3,Runner1-ML-phase
+EXP_017,SVM C=5.0 wide balanced,word (1-3)+char (2-6),"C=5.0, balanced",0.5876,0,0,0,0.619,0.588,0.555,4.5,Runner1-ML-phase
+EXP_018,XGBoost n=200,word (1-2)+char (2-5) TF-IDF,"n_estimators=200, lr=0.1, max_depth=6",0.6083,0,0,0,0.638,0.587,0.6,87.8,Runner1-ML-phase
+EXP_019,XGBoost n=300,word (1-2)+char (2-5) TF-IDF,"n_estimators=300, lr=0.05, max_depth=8",0.6009,0,0,0,0.628,0.582,0.593,201.0,Runner1-ML-phase
+EXP_020,LightGBM n=300,word (1-2)+char (2-5) TF-IDF,"n_estimators=300, lr=0.05, num_leaves=63",0.612,0,0,0,0.642,0.608,0.586,76.7,Runner1-ML-phase
+EXP_021,LightGBM n=500,word (1-2)+char (2-5) TF-IDF,"n_estimators=500, lr=0.03, num_leaves=127",0.611,0,0,0,0.636,0.606,0.592,245.7,Runner1-ML-phase

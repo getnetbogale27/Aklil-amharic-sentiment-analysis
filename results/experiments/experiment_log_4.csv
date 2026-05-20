@@ -1,0 +1,26 @@
+Experiment_ID,Model,Features,Hyperparameters,F1_macro,Accuracy,Precision_macro,Recall_macro,F1_positive,F1_negative,F1_neutral,Training_time_s,Notes
+EXP_134,5-fold stacking (5×MNB raw → meta-LR),"raw tweet, char (2-5) max=80k, 5-fold","alphas=[0.05,0.1,0.15,0.2,0.3], meta-LR C=5",0.6767,0.6792,0.705,0.6661,0.6602,0.6884,0.6816,4.0,
+EXP_113,MNB raw char(2-5) alpha=0.2,"raw tweet, char (2-5), max=80k",alpha=0.2,0.6759,0.678,0.7022,0.6661,0.6611,0.6902,0.6763,1.9,
+EXP_114,MNB raw char(2-5) alpha=0.22,"raw tweet, char (2-5), max=80k",alpha=0.22,0.6756,0.678,0.7035,0.6654,0.6592,0.6898,0.6777,1.7,
+EXP_112,MNB raw char(2-5) alpha=0.18,"raw tweet, char (2-5), max=80k",alpha=0.18,0.6738,0.6756,0.6973,0.6645,0.6603,0.6891,0.672,1.8,
+EXP_111,MNB raw char(2-5) alpha=0.15,"raw tweet, char (2-5), max=80k",alpha=0.15,0.6736,0.6744,0.6954,0.6645,0.6658,0.6868,0.6681,1.8,
+EXP_125,"MNB light-prep alpha=0.2, char(2, 5)","light-preproc tweet, char (2, 5), max=80000",alpha=0.2,0.6735,0.675,0.698,0.664,0.6621,0.688,0.6705,1.5,Only NFC+norm+URL removal
+EXP_115,MNB raw char(2-5) alpha=0.25,"raw tweet, char (2-5), max=80k",alpha=0.25,0.6735,0.6768,0.7034,0.6632,0.6527,0.6899,0.6781,1.9,
+EXP_124,"MNB light-prep alpha=0.1, char(2, 5)","light-preproc tweet, char (2, 5), max=80000",alpha=0.1,0.672,0.6725,0.6909,0.6638,0.6658,0.6857,0.6647,1.7,Only NFC+norm+URL removal
+EXP_133,Soft ensemble (5×MNB raw),"raw tweet, char (2-5/6), max=80-120k","5 MNB with alpha=0.1-0.2, avg proba",0.6719,0.6731,0.6961,0.6623,0.6612,0.6874,0.6672,9.5,Soft vote: average predict_proba across 5 MNB models
+EXP_110,MNB raw char(2-5) alpha=0.12,"raw tweet, char (2-5), max=80k",alpha=0.12,0.6717,0.6719,0.6917,0.6631,0.6667,0.6861,0.6622,1.8,
+EXP_127,"MNB light-prep alpha=0.2, char(2, 6)","light-preproc tweet, char (2, 6), max=100000",alpha=0.2,0.6708,0.6738,0.6963,0.6614,0.6501,0.6902,0.672,2.0,Only NFC+norm+URL removal
+EXP_116,MNB raw char(2-5) alpha=0.3,"raw tweet, char (2-5), max=80k",alpha=0.3,0.6708,0.675,0.7047,0.6599,0.6468,0.6849,0.6808,1.8,
+EXP_119,"MNB raw alpha=0.2, char(2, 6)","raw tweet, char (2, 6), max=120000",alpha=0.2,0.6703,0.6731,0.6976,0.6605,0.6509,0.688,0.672,2.2,
+EXP_117,"MNB raw alpha=0.2, char(2, 4)","raw tweet, char (2, 4), max=60000",alpha=0.2,0.6691,0.6713,0.6935,0.6595,0.6529,0.6838,0.6705,1.4,
+EXP_118,"MNB raw alpha=0.2, char(2, 5)","raw tweet, char (2, 5), max=120000",alpha=0.2,0.6688,0.6707,0.7009,0.6576,0.6563,0.6786,0.6714,1.9,
+EXP_123,"MNB raw alpha=0.2, char(3, 6)","raw tweet, char (3, 6), max=100000",alpha=0.2,0.6677,0.6689,0.688,0.6592,0.6576,0.6817,0.6637,1.9,
+EXP_126,"MNB light-prep alpha=0.1, char(2, 6)","light-preproc tweet, char (2, 6), max=100000",alpha=0.1,0.6668,0.6683,0.6848,0.659,0.6542,0.6851,0.6613,1.8,Only NFC+norm+URL removal
+EXP_122,"MNB raw alpha=0.2, char(2, 7)","raw tweet, char (2, 7), max=150000",alpha=0.2,0.6666,0.6713,0.7,0.6562,0.6373,0.6898,0.6728,2.3,
+EXP_128,"MNB hybrid alpha=0.1, char(2, 5)","raw+cleaned concat, char (2, 5), max=80000",alpha=0.1,0.6661,0.6652,0.6816,0.6588,0.6667,0.6844,0.6471,2.3,raw + cleaned_text concatenated
+EXP_120,"MNB raw alpha=0.2, char(1, 5)","raw tweet, char (1, 5), max=120000",alpha=0.2,0.6657,0.6707,0.7055,0.6541,0.6387,0.6787,0.6797,1.9,
+EXP_129,"MNB hybrid alpha=0.2, char(2, 5)","raw+cleaned concat, char (2, 5), max=80000",alpha=0.2,0.6648,0.6652,0.6858,0.656,0.6585,0.6795,0.6564,2.1,raw + cleaned_text concatenated
+EXP_130,"MNB hybrid alpha=0.1, char(2, 6)","raw+cleaned concat, char (2, 6), max=100000",alpha=0.1,0.66,0.6592,0.6756,0.653,0.6623,0.6754,0.6424,3.1,raw + cleaned_text concatenated
+EXP_121,"MNB raw alpha=0.2, char(1, 6)","raw tweet, char (1, 6), max=150000",alpha=0.2,0.6598,0.6671,0.7017,0.6489,0.6199,0.6832,0.6764,2.3,
+EXP_132,"MNB emoji-enhanced alpha=0.2, char(2, 5)","cleaned_text + emoji tokens, char (2, 5), max=80000",alpha=0.2,0.6428,0.6409,0.6614,0.6341,0.6506,0.6509,0.6269,1.6,cleaned_text with emoji appended as tokens
+EXP_131,"MNB emoji-enhanced alpha=0.1, char(2, 5)","cleaned_text + emoji tokens, char (2, 5), max=80000",alpha=0.1,0.6405,0.6379,0.6524,0.6342,0.6537,0.6516,0.6163,1.4,cleaned_text with emoji appended as tokens
