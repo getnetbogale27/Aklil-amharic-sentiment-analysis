@@ -1,0 +1,48 @@
+{
+  "timestamp": "2026-05-21T15:02:22.427266",
+  "output_file": "/home/user/Aklil-amharic-sentiment-analysis/results/thesis/Aklilu_Gebeyehu_MSc_Thesis_20260521.docx",
+  "total_word_count": 12542,
+  "total_paragraphs": 676,
+  "estimated_pages": 169,
+  "figures_found": [
+    "fig3_1_methodology_pipeline.jpeg",
+    "fig4_1_label_distribution.jpeg",
+    "fig4_2_tweet_length_by_class.jpeg",
+    "fig4_3_char_vs_word_ngrams.jpeg",
+    "fig4_4_all_models_comparison.jpeg",
+    "fig4_5_best_model_cm.jpeg",
+    "fig4_6_per_class_f1_heatmap.jpeg",
+    "fig4_7_experiment_progression.jpeg",
+    "fig4_8_bilstm_training_curves.jpeg",
+    "fig4_9_learning_curve.jpeg"
+  ],
+  "figures_missing": [],
+  "figures_inserted": 10,
+  "tables_inserted": 27,
+  "chapters": {
+    "front_matter": [
+      "Title Page",
+      "Declaration",
+      "Certification",
+      "Acknowledgment",
+      "Abstract",
+      "Abbreviations",
+      "TOC",
+      "List of Tables",
+      "List of Figures"
+    ],
+    "chapter1": "Introduction",
+    "chapter2": "Review of Related Literature",
+    "chapter3": "Research Methodology",
+    "chapter4": "Results and Discussion",
+    "chapter5": "Conclusion and Future Work",
+    "references": "References",
+    "appendices": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ]
+  }
+}
