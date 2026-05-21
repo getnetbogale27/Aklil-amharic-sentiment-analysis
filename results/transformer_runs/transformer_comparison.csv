@@ -1,0 +1,7 @@
+Model,Type,Parameters,F1_macro,Accuracy,Precision,Recall,F1_weighted,Train_time_min,Epochs,Run_dir
+MNB-char-best (phase 4),ML baseline,0,0.6759,0.678,0.7022,0.6661,0.6773,0.0,0,results/experiments/
+Ensemble (MNB+Transformer α=0.9),Ensemble,0,0.6127,0.6124,0.6562,0.5991,0.6125,0.0,0,results/transformer_runs/ensemble
+Bi-LSTM (char-level),Neural (random init),0,0.5776,0.5759,0.5778,0.5792,0.5746,0.0,0,
+XGBoost,ML baseline,0,0.5515,0.5504,0.0,0.0,0.0,8.8,0,results/experiments/
+LightGBM,ML baseline,0,0.5291,0.531,0.0,0.0,0.0,3.2,0,results/experiments/
+Transformer-small-maxlen64,Offline (random init),5208323,0.3648,0.3894,0.3823,0.3933,0.3665,14.6,7,results/transformer_runs/Transformer-small-maxlen64_20260521_043657

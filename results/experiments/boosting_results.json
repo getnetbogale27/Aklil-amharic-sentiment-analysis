@@ -1,0 +1,16 @@
+{
+  "XGBoost": {
+    "f1_macro": 0.5515,
+    "accuracy": 0.5504,
+    "features": "TF-IDF 10K word-level",
+    "config": "n_estimators=500, max_depth=6, lr=0.1",
+    "train_time_sec": 529.6
+  },
+  "LightGBM": {
+    "f1_macro": 0.5291,
+    "accuracy": 0.531,
+    "features": "TF-IDF 10K word-level",
+    "config": "n_estimators=500, max_depth=6, lr=0.1",
+    "train_time_sec": 194.0
+  }
+}
